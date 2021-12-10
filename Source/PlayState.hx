@@ -1,6 +1,6 @@
 package;
 
-import Section.SwagSection;
+//import Section.SwagSection;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -48,4 +48,12 @@ class PlayState
 	// debug stuff
 	var debugNum:Int = 0;
 	var debugLoaded:Int = 0;
+	
+	//secret 
+	// 1 / 1000 chance for Gitaroo Man easter egg
+			if (FlxG.random.bool(0.2))
+			{
+				// gitaroo man easter egg
+				FlxG.switchState(new Gameoveralt());
+			}
 }
