@@ -42,12 +42,21 @@ using StringTools;
 class PlayState
 {
 	// code stuff
-	
+	var BG:FlxSprite;
+	var Kid:FlxSprite;
+	var Smile:FlxSprite;
+	var Frown:FlxSprite;
 	var inCutscene:Bool = false;
+        var KidSadness:Int = 0;
+	var KidHappyness:Int = 0;
 		
 	// debug stuff
 	var debugNum:Int = 0;
 	var debugLoaded:Int = 0;
+     // controls.create.cheating.l
+    //  if cheating = true then
+     // Kid.playAnim('frown');
+	// KidHappyness += 1;
 	
 	//secret 
 	// 1 / 1000 chance for Gitaroo Man easter egg
