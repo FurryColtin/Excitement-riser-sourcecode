@@ -46,7 +46,8 @@ class PlayState
 	var Kid:FlxSprite;
 	var Smile:FlxSprite;
 	var Frown:FlxSprite;
-	var inCutscene:Bool = false;
+	var Transition:FlxSprite;
+	var inTransition:Bool = false;
         var KidSadness:Int = 0;
 	var KidHappyness:Int = 0;
 	
