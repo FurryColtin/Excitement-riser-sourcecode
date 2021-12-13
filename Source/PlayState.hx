@@ -52,7 +52,10 @@ class PlayState
 		
 	// debug stuff
 	var debugNum:Int = 0;
+        var debugText:Array<String> = [];
 	var debugLoaded:Int = 0;
+	// if debug = true then
+	// debugText = CoolUtil.coolTextFile(Paths.txt('rawr2'));
      // controls.create.cheating.l
     //  if cheating = true then
      // Kid.playAnim('frown');
