@@ -18,13 +18,14 @@ class OptionsMenu extends MusicBeatState
 	var curSelected:Int = 0;
 
 	var controlsStrings:Array<String> = [];
+	var controlsStringsbreh:Array<String> = [];
 
 	private var grpControls:FlxTypedGroup<Alphabet>;
 
 	override function create()
 	{
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		controlsStrings = CoolUtil.coolTextFile(Paths.txt('controls'));
+		controlsStrings = CoolUtil.coolTextFile(Paths.txt('rawr'));
 		menuBG.color = 0xFFea71fd;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
@@ -100,7 +101,7 @@ class OptionsMenu extends MusicBeatState
 	function changeSelection(change:Int = 0)
 	{
 		#if !switch
-		NGio.logEvent('Fresh');
+		// NGio.logEvent('Fresh');
 		#end
 
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
