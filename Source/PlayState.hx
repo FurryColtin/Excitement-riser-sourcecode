@@ -49,6 +49,13 @@ class PlayState
 	var inCutscene:Bool = false;
         var KidSadness:Int = 0;
 	var KidHappyness:Int = 0;
+	
+	// scene changers
+	if (FlxG.random.bool(0.0))
+			{
+				// gitaroo man easter egg
+				FlxG.switchState(new OptionsMenu());
+			}
 		
 	// debug stuff
 	var debugNum:Int = 0;
