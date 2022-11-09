@@ -54,27 +54,35 @@ class PlayState
 	
 	// scene changers
 	if (FlxG.random.bool(0.0))
-			{
-				// gitaroo man easter egg
-				FlxG.switchState(new OptionsMenu());
-			}
+	{
+	      // gitaroo man easter egg
+	      FlxG.switchState(new OptionsMenu());
+	}
 		
 	// debug stuff
 	var debugNum:Int = 0;
-        var debugText:Array<String> = [];
+        var debugText:String = "";
 	var debugLoaded:Int = 0;
-	// if debug = true then
-	// debugText = CoolUtil.coolTextFile(Paths.txt('rawr2'));
-     // controls.create.cheating.l
-    //  if cheating = true then
-     // Kid.playAnim('frown');
-	// KidHappyness += 1;
+	var debug:Bool = false;
+	if (debug = true)
+	{
+	   KidSadness += 1;
+	   debugNum = 1;
+	   debugLoaded = 1;
+	   debugText = "Welcome to debug mode! This mode was made by\n Jared Vilanhandoer Here are some commands\n Press [A] To decrease KidSadness\n Press [R] To increase KidSadness\n Press [U] To decrease KidHappieness\n Press [P] To increase KidHappieness";
+	}
 	
-	//secret 
-	// 1 / 1000 chance for Gitaroo Man easter egg
-			if (FlxG.random.bool(0.2))
-			{
-				// gitaroo man easter egg
-				FlxG.switchState(new Gameoveralt());
-			}
+	if (debugLoaded = 1)
+	{
+	   KidHappyness = 100000;
+           trace("Your now in debug mode. Sadly you suck.");
+	}
+	
+	// secret 
+	// secret 2
+	if (FlxG.random.bool(0.2))
+	{
+		// secret
+		FlxG.switchState(new Gameoveralt());
+	}
 }
